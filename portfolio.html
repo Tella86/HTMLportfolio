@@ -36,9 +36,7 @@
     width: 0px;
   }
   
-  header > h3 {
-    font-weight: bold;
-  }
+ 
   
   .nav-links {
     display: flex;
@@ -270,13 +268,37 @@
     margin: auto;
     text-align:center;
 }
+header > h3{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .0em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .0em; /* Adjust as needed */
+  animation: 
+    typing 4.5s steps(20, end),
+    blink-caret .85s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 
 
     </style>
     <div class="wrapper">
       <title>Ziroh Katana Mae - Portfolio</title>
     
-    <link rel="icon" href="https://i.ibb.co/7Ck5Gt6/Ziroh.png" type="image/x-icon">
+      <link rel="icon" href="https://i.ibb.co/7Ck5Gt6/Ziroh.png" type="image/x-icon">
+    </div>
   </head>
   <body>
     <nav>
@@ -284,7 +306,7 @@
         <div class="cointainer">
          <a href="portfolio.html"><img src="https://i.ibb.co/7Ck5Gt6/Ziroh.png" alt="Ziroh" width="50" height="50" ></a>
         </div>
-        <h3>Ziroh Katana Mae</h3>
+        <h3>Hello world, I’m Eng.Ziroh Katana Mae</h3>
         <div class="nav-links">
           <a href="#home">Home</a>
           <a href="#about">About</a>
